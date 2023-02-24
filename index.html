@@ -8,26 +8,109 @@
 </head>
 <body>
     
-<button type="button" id="createElementButton">Kliknij!</button>
-<button type="button" id="createElementButton2">Kliknij!</button>
-
     <script> 
-    
-    const container = document.getElementById("container");
-    const button = document.getElementById
-    ("createElementButton");
-    const button2 = document.getElementById
-    ("createElementButton2");
 
-    button.addEventListener("click", function () {
-        console.log("dodaj element...", Date.now());
-    });
+
+
+    let temperature = 10; 
+
+    if (temperature < 0) {
+        console.log("Bierzemy kurtkę")
+    } else if (temperature >= 0) {
+        console.log("Bierzemy lekką kurtkę")
+    } else if (temperature >= 20) {
+        console.log("Bierzemy krótki rękaw")
+    } else {
+        console.log("Zostajemy w domu")
+    }
+
+
+
+
+    let age = 20
+    let weigh = 40
+
+    if (age >= 18) {
+        if (weigh >= 50) {
+            console.log("Możesz oddać krew")
+        } else{
+            console.log("Nie możesz oddać krwi, musiż ważyć minimum 50kg")
+        }
+    } else { 
+        console.log("Nie masz 18 lat, nie możesz zostać dawcą")
+    }
+
+
+
+
+    let monthNumber = 10 
+    let season = ""
+
+    switch (monthNumber) {
+    case 3:
+        case 4:
+            case 5:
+    season = "wiosna"
+    break;
+    
+    case 6:
+    case 7:
+    case 8:
+    season = "Lato"
+    break;
+
+    case 9:
+    case 10:
+    case 11:
+    season = "Jesień"
+    break;
+
+
+    case 12:
+    case 1:
+    case 2:
+    season = "Zima"
+    break;
+
+    default:
+        season = "brak informacji"
+
+    }
+
+    console.log("Numer miesiąca " + monthNumber + " wskazuje na " + season)
+
+
+
+    const title = "Krzysztof Jarzyna Ze Szczecina"; 
+function slugify(title) {
+    let slug;
+    slug = title.split(" ").join("-").toLowerCase();
+    return slug;
+}
+
+console.log(slugify(title))
+
+function createMobilPhone(memory=4, cup = 2, screenSize = 5) {
+    return{
+        phoneMemory: memory,
+        phoneCPU: cpu,
+        PhoneSize: screenSize,
+    }
+}
+
+
+while (i < 5) {
+    console.log("liczba i:" + 1)
+    i = i + 1;
+}
+
 
 
 
 
 
     </script>
+
 
 
 </body>
