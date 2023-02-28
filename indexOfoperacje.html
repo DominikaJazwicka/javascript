@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function validateEmail (email) {
+            let atIndex = email.indexOf("@");
+            if (atIndex < 0) {
+                return false
+            };
+
+            let dotIndex = email.indexOf(".", atIndex); 
+            if(dotIndex === -1) {
+                return false;
+            }
+            return true;
+        };
+
+        const email1 = "dominikajazwicka1gmail.com"
+        console.log(email1, validateEmail(email1))
+
+    </script>
+
+
+</body>
+</html>

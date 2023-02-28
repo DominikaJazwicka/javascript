@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function getUserInforation (name, surname, job) {
+            let toUpperCaseName = name.toUpperCase().trim();
+            let toUpperCaseSurname = surname.toUpperCase().trim();
+            let toLowerCaseJob = job.toLowerCase().trim();
+
+            let text = `Imię: ${toUpperCaseName} Nazwisko: ${toUpperCaseSurname}`;
+            text = text.concat(` Job: ${toLowerCaseJob}`)
+
+            return text;
+        };
+
+        let user = getUserInforation("Ania", "Kowalska", "Programistka")
+        console.log(user)
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
