@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getEmailParts(email) {
+            const atInd = email.indexOf("@");
+            if(atInd === -1) {
+                return null;
+            }
+            const dotIndex = email.lastIndexOf(".");
+            if(dotIndex === -1) {
+                return null;
+            }
+
+            const user = email.slice(0, atInd);
+            const domena = email.slice(atInd + 1, dotIndex);
+            const domenaExt = email.slice(dotIndex + 1, email.length)
+
+            return {
+                user: user,
+                domena: domena,
+                domenaExt: domenaExt
+            }
+        }
+
+        console.log(getEmailParts("ola@gmail.com"))
+
+    </script>
+</body>
+</html>
