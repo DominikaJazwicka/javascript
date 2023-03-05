@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // for(let i = 0; i < arr.length; i++) {
+        //     const v = arr[i];
+        //     arr[i] = v * 2;
+        //     console.log(arr[i])
+        // }
+
+
+        // function multiplyArr(arr) {
+        //     let number = 1;
+        //     for(let i = 0; i < arr.length; i++) {
+        //         number = number * arr[i]
+        //     }
+
+        //     return number
+        // }
+        // console.log(multiplyArr([1,2,3,4,5]))
+
+
+        // function generateNunArray(arrLength) {
+        //     let arr = [];
+
+        //     for(let i = 0; i < arrLength; i++) {
+        //         arr.push(i);
+        //     }
+        //     return arr;
+        // }
+
+        // const numArr = generateNunArray(12);
+        // console.log(numArr)
+
+        // console.log(numArr.pop())
+        // console.log(numArr.pop())
+        // console.log(numArr.pop())
+
+        // console.log(numArr)
+
+
+
+        // function createSchoolGroup(groupLetter, numGroups) {
+        //     let arr = [];
+
+        //     for(let i = 1; i <= numGroups; i++) {
+        //         arr.push(i + groupLetter); 
+        //     }
+
+        //     return arr;
+        // }
+
+        // let group1 = createSchoolGroup("a", 3);
+
+        
+        // let soldCars = 1200;
+        // let carPrice = 90000;
+
+        // let fullIcome = soldCars * carPrice;
+        // console.log("Przychody fabryki ",fullIcome);
+
+        // let factoryCost = fullIcome * 0.65;
+        // console.log("Koszty produkcji fabryki ", factoryCost);
+
+        // let marketingCost = fullIcome * 0.1;
+        // console.log("Koszty marketingu: ", marketingCost)
+
+        // let income = fullIcome - factoryCost - marketingCost;
+        // console.log("Dochody fabryki ", income);
+
+        // let incomeTax = income * 0.19;
+        // console.log("Podatek: ", incomeTax);
+
+        // let incomeAfterTax = income - incomeTax 
+        // console.log("Zysk po podatku", incomeAfterTax)
+
+
+
+
+
+        // function isEven(num) {
+        //     if(num % 2 === 0) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
+        // function isEven (num) {
+        //     return num % 2 === 0;
+        // }
+
+        // console.log(12, isEven)
+
+
+
+        function recruitProgrammer(email, level, yearsExp, languages ) {
+            if(level !== "mid") {
+                return false; 
+            };
+
+            let jsExp = false;
+            let tsExp = false;
+            if(languages.indexOf("JavaScript") >= 0) jsExp = true;
+            if(languages.indexOf("TypeScript") >= 0) tsExp = true;
+
+
+            if(yearsExp >= 1 && yearsExp < 6) {
+                console.log(email, "spełnia wszystkie wymagania")
+                return true;
+            }
+
+            return false;
+        }
+
+
+        recruitProgrammer("ania@test.com", "mid", 8, 
+                            ["JavaScript", "TypeScript"])
+
+
+    </script>
+</body>
+</html>
