@@ -102,28 +102,104 @@
 
 
 
-        function recruitProgrammer(email, level, yearsExp, languages ) {
-            if(level !== "mid") {
-                return false; 
-            };
+        // function recruitProgrammer(email, level, yearsExp, languages ) {
+        //     if(level !== "mid") {
+        //         return false; 
+        //     };
 
-            let jsExp = false;
-            let tsExp = false;
-            if(languages.indexOf("JavaScript") >= 0) jsExp = true;
-            if(languages.indexOf("TypeScript") >= 0) tsExp = true;
+        //     let jsExp = false;
+        //     let tsExp = false;
+        //     if(languages.indexOf("JavaScript") >= 0) jsExp = true;
+        //     if(languages.indexOf("TypeScript") >= 0) tsExp = true;
 
 
-            if(yearsExp >= 1 && yearsExp < 6) {
-                console.log(email, "spełnia wszystkie wymagania")
+        //     if(yearsExp >= 1 && yearsExp < 6) {
+        //         console.log(email, "spełnia wszystkie wymagania")
+        //         return true;
+        //     }
+
+        //     return false;
+        // }
+
+
+        // recruitProgrammer("ania@test.com", "mid", 8, 
+        //                     ["JavaScript", "TypeScript"])
+
+
+        
+        // function extendMemberShip(user) {
+        //     let membershipDiscountFlag = 
+        //     (user.numMembersYears >= 2) ? true : false;
+
+        //     let minPostersFlag = user.numberOfPosts >= 30 ? true : false;
+
+        //     if(membershipDiscountFlag && membershipDiscountFlag === true) {
+        //         user.membershipCost *= 0.6;
+        //         console.log(user.email, "Kwalifikuje się do zniżki")
+        //     } else {
+        //         console.log(user.email, "Ma standardową cenę")
+        //     }
+
+        // }
+
+
+        let article = {
+            date: new Date(2030, 12, 01),
+            title: "Hello World",
+            content: "To mój pierwszy artykuł",
+            tags: ["blog", "lifestyle"],
+            version: 1,
+        }
+
+        function validationArticle(art) {
+            if("title" in art === false || typeof art.title !== "string") {
+                console.log("Nieprawdłowy title w article");
+                return false;
+            }
+
+            if(! "content" in art || typeof art.content !== "string") {
+            console.log("nieprawidłowy content w article");
+            return false;
+            }
+
+            if(! "tags" in art || !Array.isArray(art.tags)) {
+                console.log("nieprawidłowa tablica tags");
                 return true;
             }
 
-            return false;
+            if(! "version" in art || typeof art.version !== "number") {
+                console.log("Problem z wersją artykułu")
+                return false
+            }
+
+            if(art.version <= 0) {
+                console.log("Zła wersja artykułu");
+                return false;
+            }
+
+
+
+
+            return true;
         }
 
 
-        recruitProgrammer("ania@test.com", "mid", 8, 
-                            ["JavaScript", "TypeScript"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </script>
